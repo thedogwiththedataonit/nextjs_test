@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export default async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
   if (["GET", "POST"].includes(req.method || "")) {
     throw new Error("please give me a 500 error here");
     res.status(200).json({ message: "This will never execute" });
