@@ -1,6 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function middleware() {
+export async function middleware(
+  _req: NextRequest,
+  _res: NextResponse,
+  next: any
+) {
   let response;
   try {
     response = NextResponse.next();
